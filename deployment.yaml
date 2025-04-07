@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coffeehouse-deployment
+  labels:
+    app: coffeehouse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coffeehouse
+  template:
+    metadata:
+      labels:
+        app: coffeehouse
+    spec:
+      containers:
+      - name: coffeehouse
+        image: anusuyaa/website:latest
+        ports:
+        - containerPort: 80
