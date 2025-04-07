@@ -19,3 +19,4 @@ spec:
         image: anusuyaa/website:latest
         ports:
         - containerPort: 80
+
